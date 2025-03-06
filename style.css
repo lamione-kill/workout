@@ -4,7 +4,41 @@
     box-sizing: border-box;
 }
 
+:root {
+    /*color*/
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #3b141c;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+
+    /*font size*/
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /*Font weight*/
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /*Border radius*/
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /*Site max width*/
+    --site-max-width: 1300px;
+}
+
 .container {
+    width: 100%;
+    z-index:5;
     max-width: 1140px;
     margin: 0 auto;
     
@@ -20,10 +54,10 @@ nav {
     justify-content: space-between;
 }
 
-.logo a {
-    font-size: 2rem;
-    color:#fff;
-    text-decoration: none;
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-circle);
 }
 
 .menu {
@@ -53,6 +87,11 @@ nav {
     margin: 0 0.75em 0 0.75em;
 }
 
+.menu ul li {
+    text-decoration: none;
+    margin: 0 0.75em 0 0.75em;
+}
+
 ul:hover a {
     color: #575757;
 }
@@ -62,45 +101,78 @@ ul:hover a:hover {
     box-shadow: 0 2px 0 0 currentColor;
 }
 
-.hero {
+.hero-section{
+    min-height: 100vh;
     background-color: rgb(145, 145, 145);
 }
 
-.hero-con{
+.hero-section .section-content {
+    padding: 5rem;
     display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color:var(--white-color);
+    justify-content: space-between;
 }
 
-.hero-info {
-    width: 100%;
-    padding: 2rem;
+.hero-section .hero-details .title{
+    font-size:var(--font-size-xxl);
+    color:black;
 }
 
-.hero-info h3 {
-    font-size: 2rem;
+.hero-section .hero-details .subtitle{
+    margin-top: 8px;
+    max-width: 70%;
+    font-size:var(--font-size-xl);
+    font-weight:var(--font-weight-semibold);
 }
 
-.hero-info p {
-    margin: 1rem 0;
+.hero-section .hero-details .description {
+    font-size:var(--font-size-m);
+    margin: 24px 0 40px;
+    max-width: 70%;
 }
 
-.hero-info .hero-btn {
-    display: inline-block;
-    background-color: orange;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+.hero-section .hero-image-wrapper img{
+    max-width: 500px;
+    max-height: 300px;
+    border-radius: var(--border-radius-m);
+    width: auto;
+    height: auto;
+}
+
+.hero-section .hero-details .button {
+    display: flex;
+    gap: 23px;
+}
+
+.hero-section .hero-details .button:hover {
+    color: var(--white-color);
+    border-color: var(--secondary-color);
+    background: transparent;
+}
+
+.hero-section .hero-details .button a {
+    padding :10px 26px;
+    color: var(--primary-color);
+    border: 2px solid transparent;
+    font-weight: var(--font-weight-medium);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-m);
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
-.hero-img img {
-    width: 100%;
-    padding: 2rem;
+.hero-section .hero-image-wrapper {
+    max-width: 270px;
+    margin-right: 0;
 }
 
 .blog-con {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2rem;
+    
 }
 
 .blog-title {
@@ -108,7 +180,10 @@ ul:hover a:hover {
 }
 
 .blog-item img {
-    width : 100%;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .blog-item h4 {
@@ -164,4 +239,35 @@ ul:hover a:hover {
     background-color : #ffff;
     padding: 1rem;
     text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    .hero-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content:center;
+    }
+
+    .hero-section .hero-details :is(.subtitle,
+    .description) {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .button {
+        justify-content: center;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
 }

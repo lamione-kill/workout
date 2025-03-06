@@ -51,10 +51,10 @@ nav {
     justify-content: space-between;
 }
 
-.logo a {
-    font-size: 2rem;
-    color: #fff;
-    text-decoration: none;
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-circle);
 }
 
 .menu {
@@ -110,9 +110,11 @@ ul:hover a:hover {
     background: var(--secondary-color);
 }
 
+
+
 .services-section {
-    color:var(--white-color);
-    background: #575757;
+    color:var(--dark-color);
+    background: grey;
     padding: 50px 0 100px;
 }
 
@@ -122,6 +124,11 @@ ul:hover a:hover {
     gap: 110px;
     align-items: center;
     justify-content:space-between;
+    color: var(--white-color);
+}
+
+.services-section .menu-list .menu {
+    color: var(--dark-color);
 }
 
 .services-section .menu-list .menu-item {
@@ -134,10 +141,10 @@ ul:hover a:hover {
 }
 
 .services-section .menu-list .menu-item .menu-image {
-    max-width: 83%;
-    aspect-ratio: 1;
-    margin-bottom: 15px;
-    object-fit: contain;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius-m);
 }
 
 .services-section .menu-list .menu-item .text {
