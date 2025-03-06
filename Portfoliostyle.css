@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+    background: #111;
+    max-height:100vh;
+    padding: 0;
+    margin: 0;
+}
+
 :root {
     /*color*/
     --white-color: #fff;
@@ -36,6 +43,7 @@
     --site-max-width: 1300px;
 }
 
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -51,10 +59,10 @@ nav {
     justify-content: space-between;
 }
 
-.logo a {
-    font-size: 2rem;
-    color: #fff;
-    text-decoration: none;
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-circle);
 }
 
 .menu {
@@ -136,6 +144,3 @@ ul:hover a:hover {
     font-size: var(--font-size-m);
 }
 
-.portfolio-section .testimonial .feedback {
-    line-height: 25px;
-}

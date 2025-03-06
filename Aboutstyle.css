@@ -51,10 +51,10 @@ nav {
     justify-content: space-between;
 }
 
-.logo a {
-    font-size: 2rem;
-    color: #fff;
-    text-decoration: none;
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-circle);
 }
 
 .menu {
