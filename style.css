@@ -159,9 +159,12 @@ ul:hover a:hover {
     transition: 0.3s ease;
 }
 
-.hero-section .hero-image-wrapper {
-    max-width: 270px;
-    margin-right: 0;
+.hero-section .hero-image-wrapper img{
+    max-width: 500px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: var(--border-radius-m);
 }
 
 .blog-con {
