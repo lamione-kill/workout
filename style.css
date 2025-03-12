@@ -133,12 +133,8 @@ ul:hover a:hover {
     max-width: 70%;
 }
 
-.hero-section .hero-image-wrapper img{
-    max-width: 500px;
-    max-height: 300px;
-    border-radius: var(--border-radius-m);
-    width: auto;
-    height: auto;
+.hero-info p {
+    margin: 1rem 0;
 }
 
 .hero-section .hero-details .button {
